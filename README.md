@@ -6,7 +6,7 @@
  * [Introduction](#introduction)
  * [Getting Started](#Getting-Started)
  * [Installation](#installation)
- * [Configuration ](#configuration )
+ * [Configuration ](#configuration)
  * [Supported Environments](#supported-environments)
  * [Hardware Requirements](#Hardware-Requirements)
  * [License and Terms](#license-and-terms)
