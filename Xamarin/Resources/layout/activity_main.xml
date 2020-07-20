@@ -1,0 +1,161 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_get_aaid"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/get_aaid"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:ignore="ButtonStyle"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_get_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_get_aaid"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/getToken"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/btn_delete_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_get_token"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/deleteToken"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:ignore="ButtonStyle,RelativeOverlap"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_set_push"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_delete_token"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/set_push_unable"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:theme="@style/AppTheme"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_add_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_set_push"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/add_subscribe_topic"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_delete_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_add_topic"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/delete_subscribe_topic"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_is_autoInit_enabled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_delete_topic"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/isAutoInitEnabled"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:theme="@style/AppTheme"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_set_autoInit_enabled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_is_autoInit_enabled"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/AutoInitEnabled"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_generate_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_set_autoInit_enabled"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/generate_intent"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:theme="@style/AppTheme"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_generate_intent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/open_page_by_action"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:theme="@style/AppTheme"
+        android:visibility="invisible"/>
+
+    <include
+        layout="@layout/log_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_action"></include>
+
+</RelativeLayout>
