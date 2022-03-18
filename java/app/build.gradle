@@ -7,7 +7,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.pushdemo.myapplication009"
+        applicationId "com.huawei.pushcodelabdemo"
+        // minSdkVersion at lest be 17
         minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
