@@ -1,14 +1,15 @@
 package com.huawei.loveandshare
 
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import com.huawei.hms.push.HmsMessageService
 import com.huawei.hms.push.RemoteMessage
 
 class MyPushService : HmsMessageService() {
-    override fun onNewToken(token: String?) {
+    override fun onNewToken(token: String, bundle: Bundle) {
         Log.i(TAG, "receive token:$token")
-        if (!token.isNullOrEmpty()) {
+        if (token.isNotEmpty()) {
             sendTokenToDisplay(token)
         }
     }
@@ -21,7 +22,7 @@ class MyPushService : HmsMessageService() {
         if (remoteMessage == null) {
             return
         }
-        if (remoteMessage.data?.length ?: -1 > 0) {
+        if ((remoteMessage.data?.length ?: -1) > 0) {
             Log.i(TAG, "Message data payload: " + remoteMessage.data)
         }
         if (remoteMessage.notification != null) {
@@ -40,6 +41,6 @@ class MyPushService : HmsMessageService() {
     }
 
     companion object {
-        private val TAG: String? = "PushDemoLog"
+        private const val TAG: String = "PushDemoLog"
     }
 }

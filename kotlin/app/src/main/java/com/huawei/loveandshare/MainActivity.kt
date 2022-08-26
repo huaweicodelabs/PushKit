@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if ("com.huawei.codelabpush.ON_NEW_TOKEN" == intent?.action) {
                 val token = intent.getStringExtra("token")
-                tvToken?.text = token
+                tvToken.text = token
             }
         }
     }

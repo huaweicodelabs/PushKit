@@ -2,6 +2,7 @@
 package com.huawei.codelabpush;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.huawei.hms.push.HmsMessageService;
@@ -10,7 +11,7 @@ import com.huawei.hms.push.RemoteMessage;
 public class MyPushService extends HmsMessageService {
     private static final String TAG = "PushDemoLog";
     @Override
-    public void onNewToken(String token) {
+    public void onNewToken(String token, Bundle bundle) {
         super.onNewToken(token);
         Log.i(TAG, "receive token:" + token);
         sendTokenToDisplay(token);
