@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2016-2022. All rights reserved.
- */
-
 package com.huawei.codelabpush;
 
 import androidx.appcompat.app.AppCompatActivity;
