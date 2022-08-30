@@ -1,5 +1,9 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2016-2022. All rights reserved.
+ */
 
 package com.huawei.codelabpush;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.TextView;
-
 
 public class MainActivity extends AppCompatActivity {
     private TextView tvToken;
@@ -19,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         tvToken = findViewById(R.id.tv_log);
 
         MyReceiver receiver = new MyReceiver();
-        IntentFilter filter=new IntentFilter();
+        IntentFilter filter = new IntentFilter();
         filter.addAction("com.huawei.codelabpush.ON_NEW_TOKEN");
-        MainActivity.this.registerReceiver(receiver,filter);
+        MainActivity.this.registerReceiver(receiver, filter);
     }
 
     public class MyReceiver extends BroadcastReceiver {

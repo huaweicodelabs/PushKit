@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2016-2022. All rights reserved.
+ */
+
 package com.huawei.loveandshare
 
 import android.content.BroadcastReceiver

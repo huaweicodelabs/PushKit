@@ -1,4 +1,4 @@
-package com.huawei.loveandshare
+package com.huawei.pushcodelabdemo
 
 import android.content.Intent
 import android.os.Bundle
@@ -22,10 +22,10 @@ class MyPushService : HmsMessageService() {
         if (remoteMessage == null) {
             return
         }
-        if ((remoteMessage.data?.length ?: -1) > 0) {
+        if (!remoteMessage.data.isNullOrEmpty()) {
             Log.i(TAG, "Message data payload: " + remoteMessage.data)
         }
-        if (remoteMessage.notification != null) {
+        if (remoteMessage.notification.body != null) {
             Log.i(TAG, "Message Notification Body: " + remoteMessage.notification.body)
         }
     }

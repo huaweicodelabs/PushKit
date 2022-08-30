@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2016-2022. All rights reserved.
+ */
 
 package com.huawei.codelabpush;
 
@@ -10,12 +13,14 @@ import com.huawei.hms.push.RemoteMessage;
 
 public class MyPushService extends HmsMessageService {
     private static final String TAG = "PushDemoLog";
+
     @Override
     public void onNewToken(String token, Bundle bundle) {
         super.onNewToken(token);
         Log.i(TAG, "receive token:" + token);
         sendTokenToDisplay(token);
     }
+
     @Override
     public void onTokenError(Exception e) {
         super.onTokenError(e);
@@ -25,10 +30,10 @@ public class MyPushService extends HmsMessageService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
-        if (remoteMessage.getData().length() > 0) {
+        if (remoteMessage.getData() != null) {
             Log.i(TAG, "Message data payload: " + remoteMessage.getData());
         }
-        if (remoteMessage.getNotification() != null) {
+        if (remoteMessage.getNotification().getBody() != null) {
             Log.i(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }
     }
@@ -42,7 +47,7 @@ public class MyPushService extends HmsMessageService {
     }
 
     private void sendTokenToDisplay(String token) {
-        Intent intent=new Intent("com.huawei.codelabpush.ON_NEW_TOKEN");
+        Intent intent = new Intent("com.huawei.codelabpush.ON_NEW_TOKEN");
         intent.putExtra("token", token);
         sendBroadcast(intent);
     }
