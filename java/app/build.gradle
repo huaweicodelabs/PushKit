@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.huawei.pushcodelabdemo"
-        // minSdkVersion at lest be 17
-        minSdkVersion 17
+        // minSdkVersion at lest be 1
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
